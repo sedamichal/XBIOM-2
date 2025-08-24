@@ -1,0 +1,9 @@
+# PyTorch s podporou CUDA 12.1
+-f https://download.pytorch.org/whl/cu121/torch_stable.html
+torch
+# cupy
+numpy
+pandas
+matplotlib
+jupyter
+ipykernel
