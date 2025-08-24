@@ -28,16 +28,16 @@ Obecně platí, že:
     Transformery jsou nejlepší volbou pro velmi dlouhé časové řady a složité závislosti, ale jejich použití má smysl především u větších datasetů.
 
 ## Výběr pro zpracování
-### Vlastní GRU
+### [Vlastní GRU](GRU.py)
 jako taková naivní implementace, pro vyzkoušení.
 
-### GRU
+### [GRU](GRU.py)
  pro porovnání s naivní implementací
 
-### LSTM
+### [LSTM](LSTM.py)
  protože je to taková klasika
 
-### Transformer
+### [Transformer](Transformer.py)
  jako nejmodernější
 
 ## Metriky
@@ -50,7 +50,7 @@ Máme k dispozici soubor dat z reálné teplárny umístěné ve středně velk�
 Celková velikost datasetu je 13829 záznamů před pročištěním. Dataset ale vykazuje mezery v datech a tím je nesouvislý, např. zjevné chybné hodnoty ze senzorů. Proto je nutné rozdělit ho na sekvence a trénovat po sekvencích, aby nedocházalo ke zkreslení. Postup je takový, že se provede normalizace, u teplot jsem ještě před tím provedl převod do °F. Potom je každá sekvence rozdělena na tréovací a validční část.
 
 ## Postup
-Pro provední porovnání jsem napsal trénovací smyčku, která se vypořádává s nutností zpracování batche po segmentech a s tím spojenými problémy, jako je vyhodncení některých metrik.
+Pro provední porovnání jsem napsal [trénovací smyčku](TrainingFramewrok.py), která se vypořádává s nutností zpracování batche po segmentech a s tím spojenými problémy, jako je vyhodncení některých metrik.
 Při běhu jsou logovány všechny metriky a na závěr vyhodnoceny v grafech.
 
 ## Vyhodnocení
